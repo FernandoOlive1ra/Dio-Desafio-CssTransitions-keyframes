@@ -39,12 +39,14 @@ h2{
     text-decoration: none;
     font-size: 24px;
     padding: 1rem 4rem;
+    color: #ffffff;
     border: 1px solid #ffffff;
     min-width: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: .5s cubic-bezier(0.55, 0.025, 0.675, 0.97); 
+
 }
 
 a:hover{
@@ -291,11 +293,54 @@ a:hover{
     font-size: 14px;
     opacity: 1;
     visibility: visible;
-    letter-spacing: 4px;
+    letter-spacing: 1px;
 }
 
+/* FOOTER */
+.footer{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-color: #134FFA;
+}
  
+/* RESPONSIVO */
+@media (max-width: 800px){
+    .social-media{
+        display: flex;
+        flex-direction: column;       
+    }
 
+    .container{
+        margin-top: 0;
+    }
+    .card-container{
+        flex-direction: column;
+    }
+
+    .container .card-container:nth-last-child(1),
+    .container .card-container:nth-last-child(3){
+        flex-direction: column-reverse;
+    }
+
+    .card{
+        height: 250px;
+        width: 250px;
+    }
+
+    .card-text{
+        width: 90%;
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .card:hover > .card-wrapper::before{
+        height: 190px;
+        width: 190px;
+    }
+}
 
 
 
